@@ -55,7 +55,7 @@ extension CAPSPageMenu : UIGestureRecognizerDelegate {
                     didTapMenuItemToScroll = true
                     
                     // Add pages in between current and tapped page if necessary
-                    let smallerIndex : Int = lastPageIndex < currentPageIndex ? lastPageIndex : currentPageIndex
+                    /*let smallerIndex : Int = lastPageIndex < currentPageIndex ? lastPageIndex : currentPageIndex
                     let largerIndex : Int = lastPageIndex > currentPageIndex ? lastPageIndex : currentPageIndex
                     
                     if smallerIndex + 1 != largerIndex {
@@ -65,8 +65,9 @@ extension CAPSPageMenu : UIGestureRecognizerDelegate {
                                 pagesAddedDictionary[index] = index
                             }
                         }
-                    }
-                    
+                    }*/
+                    self.delegate?.didMoveToPageWithClick?(index: itemIndex)
+
                     addPageAtIndex(itemIndex)
                     
                     // Add page from which tap is initiated so it can be removed after tap is done
