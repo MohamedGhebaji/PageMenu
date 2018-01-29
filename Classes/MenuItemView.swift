@@ -56,6 +56,8 @@ class MenuItemView: UIView {
         // Configure menu item label font if font is set by user
         self.titleLabel!.font = pageMenu.configuration.menuItemFont
         
+        self.titleLabel?.numberOfLines = 0
+
         self.titleLabel!.textAlignment = NSTextAlignment.center
         self.titleLabel!.textColor = pageMenu.configuration.unselectedMenuItemLabelColor
         
