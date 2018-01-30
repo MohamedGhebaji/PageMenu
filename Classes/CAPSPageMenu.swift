@@ -242,7 +242,7 @@ extension CAPSPageMenu {
         let oldCurrentOrientationIsPortrait : Bool = currentOrientationIsPortrait
         
         if UIApplication.shared.statusBarOrientation != UIInterfaceOrientation.unknown {
-            currentOrientationIsPortrait = UIDevice.current.orientation.isPortrait || UIDevice.current.orientation.isFlat
+            currentOrientationIsPortrait = UIDevice.current.orientation.isPortrait
         }
         
         if (oldCurrentOrientationIsPortrait && UIApplication.shared.statusBarOrientation.isLandscape) || (!oldCurrentOrientationIsPortrait && UIApplication.shared.statusBarOrientation.isPortrait) {
