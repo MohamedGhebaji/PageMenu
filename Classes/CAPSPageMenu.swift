@@ -221,7 +221,7 @@ extension CAPSPageMenu {
         newVC.didMove(toParent: self)
     }
 
-    func removePageAtIndex(_ index : Int) {
+    open func removePageAtIndex(_ index : Int) {
         let oldVC = controllerArray[index]
 
         oldVC.willMove(toParent: nil)
