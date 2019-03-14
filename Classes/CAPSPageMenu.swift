@@ -159,6 +159,16 @@ open class CAPSPageMenu: UIViewController {
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
     }
+    
+    public func upgradePageMenuWithIndexRemoved(index : Int) {
+        removePageAtIndex(index)
+        controllerArray.remove(at: index)
+        setUpUserInterface()
+        
+        if menuScrollView.subviews.count == 0 {
+            configureUserInterface()
+        }
+    }
 }
 
 
